@@ -1,0 +1,54 @@
+1- create a repo on git hub & copy these commands to your cmd to init the project
+	echo "# Write-an-Open-Source-JavaScript-Library" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/Ahmed-Badawy/Write-an-Open-Source-JavaScript-Library.git
+	git push -u origin master
+//make two dirs (src & build)
+
+2- install node & install npm & set you npm name & email like this:-
+	npm set init-author-name Ahmed-Badawy
+	npm set init-author-email me@ahmed-badawy.com
+	npm set init-author-url http://ahmed-badawy.com
+	npm set init-author-license 'MIT'
+	npm set save-exact true
+//the save-exact will make the npm save the exact version of the depencies not * like the default.
+
+3- login to npm with the cmd
+	npm adduser
+	username: ahmed-badawy
+	password: 159357
+	email   : me@ahmed-badawy.com
+
+4- create your package.json file 
+	npm init
+//make the code begin src/index.js
+
+5- add a new node module 
+	npm install --save unique-random-array
+	Or npm i -S unique-random-array
+//as you can see. because the --save it got added to package.json under dependencies array & also saved with exact working version because of the save-exact config.
+
+6- to activate it from the cmd:-
+	node //will access the node mode
+		var lib = require('./src/index.js');
+		lib.all; 						//will output all numbers
+		lib.random(); 					//will output one number
+//ctrl+c : exit the node mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
