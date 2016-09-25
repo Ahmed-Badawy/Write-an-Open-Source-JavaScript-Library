@@ -17,9 +17,9 @@ Common Github commands
 	git clone /path/to/repository   				: Check-out/Create a working copy of a local repository
 	git clone ahmed-badawy@github.com:/TheShare		: Check-out/ For a remote server 
 
-	git status										: List the files you've changed
+	git status										: List the files you have changed
 	git add <file-name>								: add a file
-	git add * 										: add all files
+	git add * 	or:  git add -A						: add all files
 	git commit -m "Commit message"					: commit changes
 	git remote add origin <server>					: Connect to a remote repository
 	git push origin master							: push to specific pranch
@@ -47,7 +47,7 @@ Common Github commands
 //make the code begin src/index.js
 
 5- add a new node module 
-	npm install --save unique-random-array
+	npm install --save unique-random-array  
 	Or npm i -S unique-random-array
 //as you can see. because the --save it got added to package.json under dependencies array & also saved with exact working version because of the save-exact config.
 
@@ -67,11 +67,49 @@ Common Github commands
 
 
 8- publishing & updating to npm packages:-
-		npm publish
-//in the package.json -> version : 1.0.0 
-//first number (1) means a major version or a breaking change of the bundle
-//second number (0) minor release (new features or non breaking changes)
-//third number (0) is a patch release (bug fix) 
+		npm publish 				: publish & update the package
+		npm info RetreveNumbers 	: check the info of the online package
+// then tag it on github: (tags will make a tag & a release) saves the current code forever
+		git tag 1.1.0
+		git push --tags
+
+/*	
+	in the package.json -> version : 1.0.0 
+	first number (1) means a major version or a breaking change of the bundle
+	second number (0) minor release (new features or non breaking changes)
+	third number (0) is a patch release (bug fix) 
+*/
+-------------------------
+//to add a beta version put it like this: version : 1.1.0-beta.0     & on publish put this command: npm publish --tag beta
+// & on install put this command: npm i RetreveNumbers@beta
+-------------------------
+
+9- adding testing 
+		npm inatall mocha chai --save-dev
+		Or npm i -D mocha chai
+/*
+	after that we put the test code inside src
+	then we modify our package.json:  "test": "mocha src/index.test.js -w"
+	the -w means watch system files for changes
+*/
+// run the test with this:-
+		npm test
+
+
+10- Semantic-Release is an ci to automate the releases publishing process:
+		npm install -g semantic-release-cli
+		semantic-release-cli setup
+	
+
+
+
+
+
+
+
+
+
+
 
 
 
