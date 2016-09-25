@@ -7,6 +7,27 @@
 	git push -u origin master
 //make two dirs (src & build)
 
+/*********************************************************************
+Common Github commands
+**********************************************************************/
+	git config --global user.name "Ahmed-Badawy"
+	git config --global user.email me@ahmed-badawy.com
+	git config --global user.password 159357Bad
+	git init 										: Create a new local repository
+	git clone /path/to/repository   				: Check-out/Create a working copy of a local repository
+	git clone ahmed-badawy@github.com:/TheShare		: Check-out/ For a remote server 
+
+	git status										: List the files you've changed
+	git add <file-name>								: add a file
+	git add * 										: add all files
+	git commit -m "Commit message"					: commit changes
+	git remote add origin <server>					: Connect to a remote repository
+	git push origin master							: push to specific pranch
+/**********************************************************************/
+
+
+
+
 2- install node & install npm & set you npm name & email like this:-
 	npm set init-author-name Ahmed-Badawy
 	npm set init-author-email me@ahmed-badawy.com
@@ -36,6 +57,22 @@
 		lib.all; 						//will output all numbers
 		lib.random(); 					//will output one number
 //ctrl+c : exit the node mode
+
+7- now you can push it to github:-
+	git status // this will reveal what files will git add. 
+//now i created .gitignore file & added (node_modules) in it to exclude it
+	git add . 
+	git commit -m "my msg"
+	git push origin master
+
+
+8- publishing & updating to npm packages:-
+		npm publish
+//in the package.json -> version : 1.0.0 
+//first number (1) means a major version or a breaking change of the bundle
+//second number (0) minor release (new features or non breaking changes)
+//third number (0) is a patch release (bug fix) 
+
 
 
 
